@@ -1,0 +1,24 @@
+sudo apt update
+
+sudo apt install openjdk-11-jdk -y
+
+java -version
+
+sudo apt update -y
+
+sudo wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.24/bin/apache-tomcat-10.1.24.zip
+
+ls
+
+sudo apt install unzip
+
+sudo unzip apache-tomcat-10.1.24.zip
+
+ls
+
+sudo mv apache-tomcat-10.1.24 /opt/tomcat
+
+sudo chmod -R 755 /opt/tomcat
+
+/opt/tomcat/bin/startup.sh
+

@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone') {
+            steps {
+                sh 'rm -r *'
+                sh 'git clone https://gitlab.com/mkmuthukrishnan003/clean.git -b master'
+            }
+        }
+        stage('Copy') {
+            steps {
+                sh 'cp -r clean/* /var/www/html'
+            }
+        }
+    }
+}
